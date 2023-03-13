@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+ <div id="appBg">
+   <form name="calculator">
+        <!-- Input para pantalla de calculadora, autocompleate off y readonly-->
+      <input type="textfield" name="ans" value="" autocomplete="off" readonly >
+      <!--Usamos el evento Onclick para poner el valor del boton seleccionado dentro del textfield-->
+            <input type="button" value="7" class="number" onclick="document.calculator.ans.value+='7' "> 
+
+          <!--document(agrega al html), despues especificamos la direccion hasta llegar al value-->  
+
+            <input type="button" value="8" class="number" onclick="document.calculator.ans.value+='8' ">
+            <input type="button" value="9" class="number" onclick="document.calculator.ans.value+='9' ">
+            <input type="button" value="+" class="action" onclick="document.calculator.ans.value+='+' ">
+           
+            <br>
+
+            <input type="button" value="4" class="number" onclick="document.calculator.ans.value+='4' ">
+            <input type="button" value="5" class="number" onclick="document.calculator.ans.value+='5' ">
+            <input type="button" value="6" class="number" onclick="document.calculator.ans.value+='6' ">
+            <input type="button" value="-" class="action" onclick="document.calculator.ans.value+='-' ">
+            
+            <br>
+
+            <input type="button" value="1" class="number" onclick="document.calculator.ans.value+='1' ">
+            <input type="button" value="2" class="number" onclick="document.calculator.ans.value+='2' ">
+            <input type="button" value="3" class="number" onclick="document.calculator.ans.value+='3' ">
+            <input type="button" value="x" class="action"  onclick="document.calculator.ans.value+='*' ">
+            
+            <br>
+
+            <input type="button" value="0" class="number" onclick="document.calculator.ans.value+='0' ">
+
+            <!--Cambiamos el type de button a reset para restaurar el form -->
+
+            <input type="reset" value="C"   >
+            
+            <!--Agregamos la funcion eval como value y entramos la misma direccion en los parametros -->
+
+            <input type="button" value="="  onclick="document.calculator.ans.value=eval(document.calculator.ans.value) ">
+            <input type="button" value="/" class="action" onclick="document.calculator.ans.value+='/' ">
+
+            
+
+
+    </form>
+
+ </div>    
+
+
+</body>
+</html>
